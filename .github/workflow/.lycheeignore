@@ -1,0 +1,25 @@
+# Ignore localhost and private networks
+http://localhost
+http://127.0.0.1
+http://10.0.0.0/8
+http://172.16.0.0/12
+http://192.168.0.0/16
+
+# Ignore common false positives
+http://example.com
+https://example.com
+http://example.org
+https://example.org
+
+# Ignore mailto links
+mailto:
+
+# Ignore tel links
+tel:
+
+# Ignore anchor links (same page)
+^#
+
+# Ignore relative paths that might not exist in CI
+^/admin/
+^/private/ 
