@@ -19,8 +19,7 @@ jobs:
     - name: Setup lychee
       uses: lycheeverse/lychee-action@v1.7.0
       with:
-        args: --max-concurrent 10 --max-retries 3 --timeout 10 --verbose
-        file: .lycheeignore
+        args: --max-concurrency 10 --max-retries 3 --timeout 10 --verbose .lycheeignore
         format: markdown
         output: lychee-results.md
         
@@ -44,4 +43,4 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             body: comment
-          }); 
+          });
